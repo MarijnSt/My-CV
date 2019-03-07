@@ -1,0 +1,361 @@
+body {
+	font-family: 'Overpass', sans-serif;
+	background-color: #59AAC3;
+	font-size: 16px;
+	color: white;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #1F3B43;
+	font-size: 30px;
+	text-align: center;
+}
+
+h2 {
+	color: #1F3B43;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 50px; 
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	color: #1F3B43;
+}
+
+.cirkel {
+	border: 2px solid #1F3B43;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #1F3B43;
+	font-weight: 700;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+
+/* Profiel */
+#pic {
+	width: 120px;
+}
+
+.profiel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.profiel h2 {
+	color:white; 
+	margin-bottom: 0;
+}
+
+.profiel p {
+	margin-top: 5px;
+}
+
+.socials {
+	margin-top: 10px;
+	margin-bottom: 50px;
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.socials img {
+	width: 25px;
+}
+
+
+
+/* Personal Info */
+.info {
+	margin-top: 50px;
+}
+
+.info-col {
+	display: grid;
+	grid-template-rows: 50px 50px 60px;
+	grid-template-columns: 25% 75%;
+	grid-column-gap: 10px;
+	justify-content: center;
+	align-items: start;
+	height: 200px;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.info-col p:nth-child(odd) {
+	color: #1F3B43;
+	text-align: right;
+}
+
+
+/* Skills */
+.skillblock {
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.line {
+	background-color: rgba(255, 255, 255, 0.3);
+	height: 8px;
+	width: 40px;
+	border-radius: 10px;
+}
+
+.line.active {
+	background-color: rgb(255, 255, 255);
+}
+
+.skillbar {
+	max-width: 80%;
+	height: 75px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.skillbar p {
+	grid-column: 1 / 5;
+	padding-left: 10px;
+}
+
+
+/* Experience */
+.job {
+	margin-bottom: 50px;
+}
+
+.period {
+	margin-top: 30px;
+	color: #1F3B43;
+	margin-bottom: 0;
+}
+
+.company {
+	color: #1F3B43;
+	font-weight: 200;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.jobtitle {
+	text-align: left;
+	color: white;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+.jobdescription {
+	font-weight: 100;
+	margin-top: 0;
+}
+
+/* Education */
+.course {
+	margin-bottom: 50px;
+}
+
+.kind {
+	margin-top: 30px;
+	color: #1F3B43;
+	margin-bottom: 0;
+}
+
+.degree {
+	margin-bottom: 0;
+	margin-top: 0;	
+}
+
+.school {
+	font-weight: 100;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+
+@media only screen and (max-width: 449px) {
+	.container {
+		max-width: 90%;
+	}
+
+	div {
+		margin: 0 auto;
+	}
+
+	.socials {
+		width: 50%;
+	}
+
+	.socials img {
+		width: 40px;
+	}
+}
+
+@media only screen and (min-width: 450px) and (max-width: 799px) {
+	.skills {
+		display: grid;
+		grid-template-rows: 0.5fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+	}
+
+	.heading-2 {
+		grid-row: 1 / 2;
+		grid-column: 1 / 3;
+	}
+
+	.skillblock.programming {
+		grid-row: 2 / 3;
+		grid-column: 1 / 2;
+	}
+
+	.skillblock.taal {
+		grid-row: 2 / 3;
+		grid-column: 2 / 3;
+	}
+
+	.skillblock.adobe {
+		grid-row: 3 / 4;
+		grid-column: 1 / 3;
+		margin: 0;
+		width: 100%;
+	}
+
+	.skillblock {
+		width: 90%;
+	}
+
+	.skillbar {
+		margin: 0 auto;
+	}
+
+	.adobe-med {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.adobe-med .skillbar {
+		width: 75%;
+	}
+
+	.experience {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr;
+		justify-items: center;
+	}
+
+	.heading-3 {
+		grid-row: 1 / 2;
+		grid-column: 1 / 3;
+	}
+
+	.job {
+		width: 90%;
+	}
+
+	.education {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr;
+		justify-items: center;
+	}
+
+	.heading-4 {
+		grid-row: 1 / 2;
+		grid-column: 1 / 3;
+	}
+
+	.course {
+		width: 90%;
+	}
+
+	.line {
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 60px 0.5fr 0.5fr 1fr 1fr;
+		column-gap: 50px;
+		max-width: 900px;
+	}
+
+	.titel {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+
+	.profiel {
+		grid-column: 1 / 3;
+		grid-row: 2 / 3;
+		margin-top: 50px;
+	}
+
+	.info {
+		grid-column: 1 / 2;
+		grid-row: 3 / 4;
+		margin: 0 auto;
+	}
+
+	.skills {
+		grid-column: 2 / 3;
+		grid-row: 3 / 6;
+		margin-top: 50px;
+		margin-top: 0;
+	}
+
+	.experience {
+		grid-column: 1 / 2;
+		grid-row: 4 / 5;
+	}
+
+	.education {
+		grid-column: 1 / 2;
+		grid-row: 5 / 6;
+	}
+
+	.heading-2 {
+		margin-bottom: 50px;
+	}
+
+	.skillblock {
+		margin-bottom: 100px;
+	}
+
+	.skillbar {
+		margin: 0 auto;
+		max-width: 300px;
+	}
+
+	.job {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.jobtitle {
+		text-align: center;
+	}
+
+	.course {
+		text-align: center;
+		margin: 0 auto;
+	}
+}
